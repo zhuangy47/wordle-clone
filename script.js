@@ -1,11 +1,11 @@
-import { WORDS } from "./words.js";
 import { VALID } from "./valid.js";
-
+console.log
 let NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
-let rightGuessString = WORDS.shift();
+console.log(VALID[Math.floor(Math.random() * VALID.length)])
+let rightGuessString = VALID[Math.floor(Math.random() * VALID.length)];
 let timeout;
 console.log(rightGuessString)
 
@@ -217,9 +217,7 @@ async function checkGuess () {
     }
 }
 
-function cum() {
-    console.log('hi')
-}
+
 const syncWait = ms => {
     const end = Date.now() + ms
     while (Date.now() < end) continue
@@ -313,7 +311,7 @@ async function resetBoard() {
     guessesRemaining = NUMBER_OF_GUESSES;
     currentGuess = [];
     nextLetter = 0;
-    rightGuessString = WORDS.shift();
+    rightGuessString = VALID[Math.floor(Math.random() * VALID.length)];
     console.log(rightGuessString);
     document.getElementById("game-board").innerHTML = "";
 
